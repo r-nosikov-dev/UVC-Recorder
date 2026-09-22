@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+ROOT="$(cd "$(dirname "$0")" && pwd)"
+export LD_LIBRARY_PATH="$ROOT/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+export GST_PLUGIN_PATH="$ROOT/lib/gstreamer-1.0"
+export GST_PLUGIN_SYSTEM_PATH=""
+export GST_REGISTRY="$ROOT/.gst-registry.bin"
+exec "$ROOT/uvc-recorder.bin" "$@"

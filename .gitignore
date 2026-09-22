@@ -1,0 +1,10 @@
+/build/
+/cmake-build-*/
+/.cache/
+compile_commands.json
+*.mp4
+*.o
+*.swp
+bin/.gst-registry.bin
+
+# Prebuilt Linux bundle in bin/ is tracked on purpose.
